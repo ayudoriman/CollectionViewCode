@@ -1,5 +1,5 @@
 //
-//  cView2Cell.swift
+//  cView3Cell.swift
 //  CollectionViewCode
 //
 //  Created by KFCC on 2015/10/18.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class cView2Cell: UICollectionViewCell {
+class cView3Cell: UICollectionViewCell {
     
 }
