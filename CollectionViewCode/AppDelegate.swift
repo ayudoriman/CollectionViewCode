@@ -13,9 +13,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+//            // first time to launch this app
+////        var tutorialCheck = defaults.objectForKey("first") as! Bool
+//        let defaults = NSUserDefaults.standardUserDefaults()
+////        var udid: AnyObject = defaults.objectForKey("first")
+//        
+//        let storyboard:UIStoryboard = UIStoryboard(name: "Main",bundle:nil)
+//        var VC :UIViewController = storyboard.instantiateViewControllerWithIdentifier("main") as UIViewController
+//        
+//        
+////        var tutorialCheck = true
+//        print(defaults.objectForKey("first") as! Bool)
+//        if defaults.objectForKey("first") as! Bool{
+//            VC  = storyboard.instantiateViewControllerWithIdentifier("main") as UIViewController
+////            defaults.setObject(false, forKey: "first")
+//        }else{
+//            defaults.setObject(true, forKey: "first")
+//            VC  = storyboard.instantiateViewControllerWithIdentifier("tutorial") as UIViewController
+//        }
+//
+//        // Override point for customization after application launch.
+//        
+//        window?.rootViewController = VC
         return true
     }
 

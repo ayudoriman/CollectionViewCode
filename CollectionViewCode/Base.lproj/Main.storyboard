@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="wrz-2t-NEv">
+            <objects>
+                <viewController storyboardIdentifier="tutorial" id="tYg-fs-0A2" customClass="TutorialViewController" customModule="CollectionViewCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sfa-wu-rdJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GAf-Ax-AgF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qa8-0c-CNo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0P-w4-1Sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="-454"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,20 +33,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXM-DG-sB7">
-                                <rect key="frame" x="286" y="508" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="addview" destination="BYZ-38-t0r" eventType="touchDown" id="xWQ-2G-SGv"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="EwS-MT-dXl" kind="show" identifier="toSubViewController" id="Ocn-II-g4M"/>
+                        <segue destination="9lY-oz-oTG" kind="show" identifier="toAddViewController" id="jbm-0z-Ovr"/>
+                        <segue destination="tYg-fs-0A2" kind="show" identifier="toTurorialSegue" id="uQl-C2-Siq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="zpB-IU-e8d">
+            <objects>
+                <viewController storyboardIdentifier="AddView" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9lY-oz-oTG" customClass="AddViewController" customModule="CollectionViewCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="US6-iG-cHs"/>
+                        <viewControllerLayoutGuide type="bottom" id="uUX-8d-nWs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="55E-GC-iZx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6h-7M-dHs">
+                                <rect key="frame" x="20" y="182" width="233" height="190"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="U6h-7M-dHs" id="e0K-CY-5Nc"/>
+                        <segue destination="nVJ-68-LjD" kind="show" identifier="toFaceSelectViewSegue" id="PLP-iB-WPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSN-U9-tm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="1061"/>
+        </scene>
+        <!--Face Select View Controller-->
+        <scene sceneID="TcV-rd-zdM">
+            <objects>
+                <viewController id="nVJ-68-LjD" customClass="FaceSelectViewController" customModule="CollectionViewCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eit-Nz-Lkf"/>
+                        <viewControllerLayoutGuide type="bottom" id="AsK-71-OS8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kp4-5Q-Bmb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vlw-Nf-DFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="1061"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="8k3-a5-Dd4">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="EwS-MT-dXl" customClass="SubViewController" customModule="CollectionViewCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dYZ-ER-q3b"/>
+                        <viewControllerLayoutGuide type="bottom" id="l5h-NX-zW6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FwL-c8-qQS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zja-8Q-G0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="316"/>
         </scene>
     </scenes>
 </document>
