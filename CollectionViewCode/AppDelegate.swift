@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // Override point for customization after application launch.
 //        
 //        window?.rootViewController = VC
+        
+        print("hoge!")
+        
         return true
     }
 
