@@ -16,7 +16,6 @@
 		A3096F7F1BD38141002AFDF8 /* CollectionViewCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3096F7E1BD38141002AFDF8 /* CollectionViewCodeUITests.swift */; };
 		A3096F8E1BD38AF9002AFDF8 /* cView1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3096F8C1BD38AF9002AFDF8 /* cView1Cell.swift */; };
 		A3096F921BD38B31002AFDF8 /* cView2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3096F901BD38B31002AFDF8 /* cView2Cell.swift */; };
-		A3096F991BD3BCFE002AFDF8 /* cView3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3096F981BD3BCFE002AFDF8 /* cView3Cell.swift */; };
 		A3096F9B1BD3BD41002AFDF8 /* cView4Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3096F9A1BD3BD41002AFDF8 /* cView4Cell.swift */; };
 		A3AC193A1C13F4D500985871 /* FaceSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC19391C13F4D500985871 /* FaceSelectViewController.swift */; };
 		A3C14C941C09CF1E00BCEFC3 /* cView5Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C14C931C09CF1E00BCEFC3 /* cView5Cell.swift */; };
@@ -60,6 +59,7 @@
 		D3A125B61C672A33002C9B55 /* Tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AE1C672A33002C9B55 /* Tutorial5.png */; };
 		D3A125B71C672A33002C9B55 /* Tutorial6.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AF1C672A33002C9B55 /* Tutorial6.png */; };
 		D3A125B81C672A33002C9B55 /* Tutorial7.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125B01C672A33002C9B55 /* Tutorial7.png */; };
+		D3A125BA1C67CA67002C9B55 /* cView3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A125B91C67CA67002C9B55 /* cView3Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,6 @@
 		A3096F801BD38141002AFDF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3096F8C1BD38AF9002AFDF8 /* cView1Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cView1Cell.swift; sourceTree = "<group>"; };
 		A3096F901BD38B31002AFDF8 /* cView2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cView2Cell.swift; sourceTree = "<group>"; };
-		A3096F981BD3BCFE002AFDF8 /* cView3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cView3Cell.swift; path = ../cView3Cell.swift; sourceTree = "<group>"; };
 		A3096F9A1BD3BD41002AFDF8 /* cView4Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cView4Cell.swift; sourceTree = "<group>"; };
 		A3AC19391C13F4D500985871 /* FaceSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceSelectViewController.swift; sourceTree = "<group>"; };
 		A3C14C931C09CF1E00BCEFC3 /* cView5Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cView5Cell.swift; sourceTree = "<group>"; };
@@ -139,6 +138,7 @@
 		D3A125AE1C672A33002C9B55 /* Tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial5.png; sourceTree = "<group>"; };
 		D3A125AF1C672A33002C9B55 /* Tutorial6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial6.png; sourceTree = "<group>"; };
 		D3A125B01C672A33002C9B55 /* Tutorial7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial7.png; sourceTree = "<group>"; };
+		D3A125B91C67CA67002C9B55 /* cView3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cView3Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 				A3EEAB451BEF152800808AB3 /* SubViewController.swift */,
 				A3096F8C1BD38AF9002AFDF8 /* cView1Cell.swift */,
 				A3096F901BD38B31002AFDF8 /* cView2Cell.swift */,
-				A3096F981BD3BCFE002AFDF8 /* cView3Cell.swift */,
+				D3A125B91C67CA67002C9B55 /* cView3Cell.swift */,
 				A3096F9A1BD3BD41002AFDF8 /* cView4Cell.swift */,
 				A3C14C931C09CF1E00BCEFC3 /* cView5Cell.swift */,
 				A3096F621BD38141002AFDF8 /* Main.storyboard */,
@@ -451,11 +451,11 @@
 				A3096F9B1BD3BD41002AFDF8 /* cView4Cell.swift in Sources */,
 				A3EEAB8E1BEF292600808AB3 /* AddViewController.swift in Sources */,
 				A3EEAB461BEF152800808AB3 /* SubViewController.swift in Sources */,
+				D3A125BA1C67CA67002C9B55 /* cView3Cell.swift in Sources */,
 				A3096F5F1BD38141002AFDF8 /* AppDelegate.swift in Sources */,
 				A3AC193A1C13F4D500985871 /* FaceSelectViewController.swift in Sources */,
 				A3C14C941C09CF1E00BCEFC3 /* cView5Cell.swift in Sources */,
 				A3096F8E1BD38AF9002AFDF8 /* cView1Cell.swift in Sources */,
-				A3096F991BD3BCFE002AFDF8 /* cView3Cell.swift in Sources */,
 				D362859D1C54975E00175DF2 /* TutorialViewController.swift in Sources */,
 				A3096F921BD38B31002AFDF8 /* cView2Cell.swift in Sources */,
 			);
