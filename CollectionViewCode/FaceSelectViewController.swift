@@ -27,7 +27,7 @@ class FaceSelectViewController: UIViewController {
         
         //悲しい顔ボタン
         sadFace = UIButton()
-        sadFace.frame.size = CGSize(width: self.view.frame.width/4,height: self.view.frame.width/4)
+        sadFace.frame.size = CGSize(width: self.view.frame.width/5,height: self.view.frame.width/5)
         sadFace.center = CGPoint(x: self.view.frame.width*(1/4), y: self.view.frame.height*(58/100))
         sadFace.setImage(UIImage(named: "SadFace.png"), forState: .Normal)
         sadFace.addTarget(self, action: "sadFaceData", forControlEvents: .TouchUpInside)
@@ -35,7 +35,7 @@ class FaceSelectViewController: UIViewController {
         
         //楽しい顔ボタン
         happyFace = UIButton()
-        happyFace.frame.size = CGSize(width: self.view.frame.width/4,height: self.view.frame.width/4)
+        happyFace.frame.size = CGSize(width: self.view.frame.width/5,height: self.view.frame.width/5)
         happyFace.center = CGPoint(x: self.view.frame.width*(2/4), y: self.view.frame.height*(58/100))
         happyFace.setImage(UIImage(named: "HappyFace.png"), forState: .Normal)
         happyFace.addTarget(self, action: "happyFaceData", forControlEvents: .TouchUpInside)
@@ -43,7 +43,7 @@ class FaceSelectViewController: UIViewController {
         
         //おこってる顔ボタン
         upsetFace = UIButton()
-        upsetFace.frame.size = CGSize(width: self.view.frame.width/4,height: self.view.frame.width/4)
+        upsetFace.frame.size = CGSize(width: self.view.frame.width/5,height: self.view.frame.width/5)
         upsetFace.center = CGPoint(x: self.view.frame.width*(3/4), y: self.view.frame.height*(58/100))
         upsetFace.setImage(UIImage(named: "UpsetFace.png"), forState: .Normal)
         upsetFace.addTarget(self, action: "upsetFaceData", forControlEvents: .TouchUpInside)

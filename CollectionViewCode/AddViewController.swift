@@ -126,10 +126,10 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         
         //完了ボタン
         doneButton = UIButton()
-        doneButton.frame.size = CGSize(width: 70, height: 20)
-        doneButton.center = CGPoint(x: self.view.center.x, y: self.view.frame.height*(7/8))
+        doneButton.frame.size = CGSize(width: 70, height: 70)
+        doneButton.center = CGPoint(x: self.view.center.x, y: self.view.frame.height*(17/20))
         doneButton.addTarget(self, action: "saveHistory", forControlEvents: .TouchUpInside)
-        doneButton.setTitle("Save", forState: .Normal)
+        doneButton.setImage(UIImage(named: "saveIcon.png"), forState: .Normal)
         doneButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         addScroll.addSubview(doneButton)
         // Do any additional setup after loading the view.

@@ -52,6 +52,14 @@
 		D36A9C201C54B6F5005B3AFD /* textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9C041C54B6F5005B3AFD /* textfield.png */; };
 		D36A9C211C54B6F5005B3AFD /* UpsetFace.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9C051C54B6F5005B3AFD /* UpsetFace.png */; };
 		D36A9C241C54BB2A005B3AFD /* film.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9C231C54BB2A005B3AFD /* film.png */; };
+		D3A125A81C670C7E002C9B55 /* saveIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125A71C670C7E002C9B55 /* saveIcon.png */; };
+		D3A125B21C672A33002C9B55 /* Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AA1C672A33002C9B55 /* Tutorial1.png */; };
+		D3A125B31C672A33002C9B55 /* Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AB1C672A33002C9B55 /* Tutorial2.png */; };
+		D3A125B41C672A33002C9B55 /* Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AC1C672A33002C9B55 /* Tutorial3.png */; };
+		D3A125B51C672A33002C9B55 /* Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AD1C672A33002C9B55 /* Tutorial4.png */; };
+		D3A125B61C672A33002C9B55 /* Tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AE1C672A33002C9B55 /* Tutorial5.png */; };
+		D3A125B71C672A33002C9B55 /* Tutorial6.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125AF1C672A33002C9B55 /* Tutorial6.png */; };
+		D3A125B81C672A33002C9B55 /* Tutorial7.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A125B01C672A33002C9B55 /* Tutorial7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +131,14 @@
 		D36A9C041C54B6F5005B3AFD /* textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield.png; sourceTree = "<group>"; };
 		D36A9C051C54B6F5005B3AFD /* UpsetFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpsetFace.png; sourceTree = "<group>"; };
 		D36A9C231C54BB2A005B3AFD /* film.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = film.png; sourceTree = "<group>"; };
+		D3A125A71C670C7E002C9B55 /* saveIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveIcon.png; sourceTree = "<group>"; };
+		D3A125AA1C672A33002C9B55 /* Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial1.png; sourceTree = "<group>"; };
+		D3A125AB1C672A33002C9B55 /* Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial2.png; sourceTree = "<group>"; };
+		D3A125AC1C672A33002C9B55 /* Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial3.png; sourceTree = "<group>"; };
+		D3A125AD1C672A33002C9B55 /* Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial4.png; sourceTree = "<group>"; };
+		D3A125AE1C672A33002C9B55 /* Tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial5.png; sourceTree = "<group>"; };
+		D3A125AF1C672A33002C9B55 /* Tutorial6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial6.png; sourceTree = "<group>"; };
+		D3A125B01C672A33002C9B55 /* Tutorial7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial7.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,9 +254,17 @@
 				D36A9BEA1C54B6F5005B3AFD /* Background.png */,
 				D36A9BEB1C54B6F5005B3AFD /* BasicFace.png */,
 				D36A9BEC1C54B6F5005B3AFD /* Cancel.png */,
+				D3A125AA1C672A33002C9B55 /* Tutorial1.png */,
+				D3A125AB1C672A33002C9B55 /* Tutorial2.png */,
+				D3A125AC1C672A33002C9B55 /* Tutorial3.png */,
+				D3A125AD1C672A33002C9B55 /* Tutorial4.png */,
+				D3A125AE1C672A33002C9B55 /* Tutorial5.png */,
+				D3A125AF1C672A33002C9B55 /* Tutorial6.png */,
+				D3A125B01C672A33002C9B55 /* Tutorial7.png */,
 				D36A9BED1C54B6F5005B3AFD /* comment.png */,
 				D36A9BEE1C54B6F5005B3AFD /* eNIKKI.png */,
 				D36A9BEF1C54B6F5005B3AFD /* HappyFace.png */,
+				D3A125A71C670C7E002C9B55 /* saveIcon.png */,
 				D36A9BF01C54B6F5005B3AFD /* location.png */,
 				D36A9BF11C54B6F5005B3AFD /* OriginPhoto.png */,
 				D36A9BF21C54B6F5005B3AFD /* PhotoLogo.png */,
@@ -360,14 +384,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D36A9C161C54B6F5005B3AFD /* iphone_flame.psd in Resources */,
+				D3A125B61C672A33002C9B55 /* Tutorial5.png in Resources */,
 				D36A9C211C54B6F5005B3AFD /* UpsetFace.png in Resources */,
 				D36A9C0E1C54B6F5005B3AFD /* OriginPhoto.png in Resources */,
 				D36A9C241C54BB2A005B3AFD /* film.png in Resources */,
+				D3A125B41C672A33002C9B55 /* Tutorial3.png in Resources */,
+				D3A125B21C672A33002C9B55 /* Tutorial1.png in Resources */,
 				D36A9C1D1C54B6F5005B3AFD /* SadFace.png in Resources */,
 				D36A9C1F1C54B6F5005B3AFD /* shadow_square.png in Resources */,
 				D36A9C181C54B6F5005B3AFD /* OriginPhoto.psd in Resources */,
 				D36A9C101C54B6F5005B3AFD /* Background.psd in Resources */,
+				D3A125B51C672A33002C9B55 /* Tutorial4.png in Resources */,
 				D36A9C1C1C54B6F5005B3AFD /* plate.png in Resources */,
+				D3A125B31C672A33002C9B55 /* Tutorial2.png in Resources */,
 				A3096F691BD38141002AFDF8 /* LaunchScreen.storyboard in Resources */,
 				D36A9C0F1C54B6F5005B3AFD /* PhotoLogo.png in Resources */,
 				D36A9C1E1C54B6F5005B3AFD /* screw.png in Resources */,
@@ -380,6 +409,7 @@
 				D36A9C1B1C54B6F5005B3AFD /* screw.psd in Resources */,
 				D36A9C141C54B6F5005B3AFD /* design.psd in Resources */,
 				D36A9C151C54B6F5005B3AFD /* eNIKKI.psd in Resources */,
+				D3A125B81C672A33002C9B55 /* Tutorial7.png in Resources */,
 				D36A9C081C54B6F5005B3AFD /* BasicFace.png in Resources */,
 				A3096F641BD38141002AFDF8 /* Main.storyboard in Resources */,
 				D36A9C061C54B6F5005B3AFD /* addImage.png in Resources */,
@@ -387,9 +417,11 @@
 				D36A9C111C54B6F5005B3AFD /* BasicFace.psd in Resources */,
 				D36A9C091C54B6F5005B3AFD /* Cancel.png in Resources */,
 				D36A9C201C54B6F5005B3AFD /* textfield.png in Resources */,
+				D3A125B71C672A33002C9B55 /* Tutorial6.png in Resources */,
 				D36A9C1A1C54B6F5005B3AFD /* plate.psd in Resources */,
 				D36A9C191C54B6F5005B3AFD /* PhotoLogo.psd in Resources */,
 				D36A9C0C1C54B6F5005B3AFD /* HappyFace.png in Resources */,
+				D3A125A81C670C7E002C9B55 /* saveIcon.png in Resources */,
 				D36A9C131C54B6F5005B3AFD /* comment.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

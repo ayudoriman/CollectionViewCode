@@ -37,11 +37,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         UIColor(red:70/255, green: 114/255, blue: 255/255, alpha: 0.6),
                         UIColor(red:36/255, green: 255/255, blue: 31/255, alpha:0.6),
                         UIColor(red:255/255, green: 255/255, blue: 51/255, alpha: 0.6),
-                        UIColor(red:254/255, green: 168/255, blue: 57/255, alpha: 0.6),
-                        UIColor(red:199/255, green: 73/255, blue: 251/255, alpha: 0.6),]
+                        UIColor(red:255/255, green: 153/255, blue: 51/255, alpha: 0.6),
+                        UIColor(red:199/255, green: 73/255, blue: 251/255, alpha: 0.6),
+                        UIColor(red:0/255, green: 255/255, blue: 255/255, alpha: 0.6)]
     var backnumber = [0,1,2,3,4,5]
                     // gray/sad/happy/upset/
 
+    var randomNumber1:[Int] = [0,1,2,3,4,5,6]
+    var randomNumber2:[Int] = [0,1,2,3,4,5,6]
+    var randomNumber3:[Int] = [0,1,2,3,4,5,6]
+    var randomNumber4 = [0,1,2,3,4,5,6]
+    var randomNumber5 = [0,1,2,3,4,5,6]
     
     var dates1 = ["1","2","3","4","5","6","7"]
     var dates2 = ["8","9","10","11","12","13","14"]
@@ -54,6 +60,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Do any additional setup after loading the view, typically from a nib.
         checkNum = 0
         
+        var sum: UInt32 = 7
+        
+        for _ in 1...7 {
+            let random = (Int)(arc4random_uniform(sum))
+            randomNumber1 += [random]
+            sum = sum-1
+            print(randomNumber1)
+            print(sum)
+        }
         //月の取得
         let nowDate = NSDate()
         let dateFormatter1 = NSDateFormatter()
@@ -186,7 +201,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let dic = userdefaults.objectForKey(date)
             
             if dic == nil{
-                let random = (Int)(arc4random_uniform(6))
+                let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
                 cell.dateLabel1.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
@@ -207,7 +222,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             let dic = userdefaults.objectForKey(date)
             if dic == nil{
-                let random = (Int)(arc4random_uniform(6))
+                let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
                 cell.dateLabel2.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
@@ -223,7 +238,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let dic = userdefaults.objectForKey(date)
             
             if dic == nil{
-                let random = (Int)(arc4random_uniform(6))
+                let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
                 cell.dateLabel3.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
@@ -239,7 +254,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let dic = userdefaults.objectForKey(date)
             
             if dic == nil{
-                let random = (Int)(arc4random_uniform(6))
+                let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
                 cell.dateLabel4.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
@@ -272,7 +287,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     let dic = userdefaults.objectForKey(date)
                 
                     if dic == nil{
-                        let random = (Int)(arc4random_uniform(6))
+                        let random = (Int)(arc4random_uniform(7))
                         cell.backgroundColor = backArray[random]
                         cell.dateLabel5.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
                     } else {
@@ -300,7 +315,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     let dic = userdefaults.objectForKey(date)
                     
                     if dic == nil{
-                        let random = (Int)(arc4random_uniform(6))
+                        let random = (Int)(arc4random_uniform(7))
                         cell.backgroundColor = backArray[random]
                         cell.dateLabel5.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
                     }else{
