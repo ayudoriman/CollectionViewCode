@@ -25,7 +25,7 @@ class cView1Cell: UICollectionViewCell {
         super.init(frame: frame)
         dateLabel1 = UILabel()
         dateLabel1.frame = CGRectMake(14, 14, self.frame.width*(1/3), self.frame.height*(1/4))
-        dateLabel1.textColor = UIColor.whiteColor()
+        dateLabel1.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
         dateLabel1.font = UIFont.systemFontOfSize(self.frame.height*(1/4))
         
         shadow = UIImageView()

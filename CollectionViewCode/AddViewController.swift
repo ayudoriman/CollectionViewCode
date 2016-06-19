@@ -33,7 +33,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     var photoData: NSData!
     
     var faceNumber: Int = 0
-    var faceName = ["BasicFace.png","SadFace.png","HappyFace.png","UpsetFace.png"]
+    var faceName = ["BasicFace.png","SadFace.png","HappyFace.png","UpsetFace.png","BoringFace.png","ConfusingFace.png","WonderFace.png"]
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -164,17 +164,28 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     }
 
     func saveHistory(){
+        if photoData == nil {
+            let alert = UIAlertController(title: "No Photo", message: "写真を選択してください。",preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in print("No Photo")}
+                )
+            )
+            presentViewController(alert, animated: true, completion: nil)
+            
+        }else{
+        
         let nowDate = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_JP") // ロケールの設定
         dateFormatter.dateFormat = "yyyyMMdd"
         
-        let dictionary: [String: AnyObject] = ["place": placeField.text!, "comment": commentField.text!, "face": faceNumber]
-        userDefaults.setObject(dictionary, forKey: dateFormatter.stringFromDate(nowDate))
+        let dictionary: [String: AnyObject] = ["place": placeField.text!, "comment": commentField.text!, "face": faceNumber, "image": photoData]
+        userDefaults.setObject(dictionary, forKey:dateFormatter.stringFromDate(nowDate))
         userDefaults.synchronize()
-        print(dictionary)
+        //print(dictionary)
         
         print("保存日時\(dateFormatter.stringFromDate(nowDate))")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool{
@@ -243,14 +254,6 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         self.dismissViewControllerAnimated(true, completion: nil)
 
     }
-    //画像保存のメソッド 途中
-//    func saveImage(data: NSData) {
-//        let dataPath = (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as! Array<String>).first!.stringByAppendingPathComponent("test.jpg")
-//        var fileManager: NSFileManager = NSFileManager()
-//        photoData.writeToFile(dataPath, atomically: true)
-//    }
-//
-//    }
     
     
 }

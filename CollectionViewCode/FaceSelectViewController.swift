@@ -17,6 +17,9 @@ class FaceSelectViewController: UIViewController {
     var sadFace: UIButton!
     var happyFace: UIButton!
     var upsetFace: UIButton!
+    var boringFace: UIButton!
+    var confusingFace: UIButton!
+    var wonderFace: UIButton!
     var add: AddViewController!
     
 //    ②delegateプロパティの定義
@@ -49,6 +52,30 @@ class FaceSelectViewController: UIViewController {
         upsetFace.addTarget(self, action: "upsetFaceData", forControlEvents: .TouchUpInside)
         view.addSubview(upsetFace)
         
+        //あきてる顔ボタン
+        boringFace = UIButton()
+        boringFace.frame.size = CGSize(width: self.view.frame.width/5,height: self.view.frame.width/5)
+        boringFace.center = CGPoint(x: self.view.frame.width*(2/4), y: self.view.frame.height*(28/100))
+        boringFace.setImage(UIImage(named: "BoringFace.png"), forState: .Normal)
+        boringFace.addTarget(self, action: "boringFaceData", forControlEvents: .TouchUpInside)
+        view.addSubview(boringFace)
+        
+        //困ってる顔ボタン
+        confusingFace = UIButton()
+        confusingFace.frame.size = CGSize(width: self.view.frame.width/5,height: self.view.frame.width/5)
+        confusingFace.center = CGPoint(x: self.view.frame.width*(3/4), y: self.view.frame.height*(28/100))
+        confusingFace.setImage(UIImage(named: "ConfusingFace.png"), forState: .Normal)
+        confusingFace.addTarget(self, action: "confusingFaceData", forControlEvents: .TouchUpInside)
+        view.addSubview(confusingFace)
+        
+        //驚いてる顔ボタン
+        wonderFace = UIButton()
+        wonderFace.frame.size = CGSize(width: self.view.frame.width/5,height: self.view.frame.width/5)
+        wonderFace.center = CGPoint(x: self.view.frame.width*(1/4), y: self.view.frame.height*(28/100))
+        wonderFace.setImage(UIImage(named: "WonderFace.png"), forState: .Normal)
+        wonderFace.addTarget(self, action: "wonderFaceData", forControlEvents: .TouchUpInside)
+        view.addSubview(wonderFace)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -71,6 +98,21 @@ class FaceSelectViewController: UIViewController {
     
     func upsetFaceData() {
         self.delegate?.didTapFaceButton(3)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func boringFaceData() {
+        self.delegate?.didTapFaceButton(4)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func confusingFaceData() {
+        self.delegate?.didTapFaceButton(5)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func wonderFaceData() {
+        self.delegate?.didTapFaceButton(6)
         dismissViewControllerAnimated(true, completion: nil)
     }
     

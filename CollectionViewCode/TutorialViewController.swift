@@ -11,40 +11,18 @@ import UIKit
 class TutorialViewController: UIViewController {
     
     var scrollPage: UIScrollView!
+    var pageControl: UIPageControl!
     var startButton = UIButton()
-    let ImageView1 = UIImageView()
-    let ImageView2 = UIImageView()
-    let ImageView3 = UIImageView()
-    let ImageView4 = UIImageView()
-    let ImageView5 = UIImageView()
-    let ImageView6 = UIImageView()
+    var imgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("aiu")
+        let pageSize = 6
         
-        let tutorialImage1 = UIImage(named: "Tutorial2.png")
-        let tutorialImage2 = UIImage(named: "Tutorial3.png")
-        let tutorialImage3 = UIImage(named: "Tutorial4.png")
-        let tutorialImage4 = UIImage(named: "Tutorial5.png")
-        let tutorialImage5 = UIImage(named: "Tutorial6.png")
-        let tutorialImage6 = UIImage(named: "Tutorial7.png")
+        let tImageArray:[String] = ["Tutorial2.png","Tutorial3.png","Tutorial4.png","Tutorial5.png","Tutorial6.png","Tutorial7.png"]
 
-        ImageView1.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        ImageView2.frame = CGRect(x: self.view.frame.width, y: 0, width: self.view.frame.width, height: self.view.frame.height-20)
-        ImageView3.frame = CGRect(x: self.view.frame.width*2, y: 0, width: self.view.frame.width, height: self.view.frame.height-20)
-        ImageView4.frame = CGRect(x: self.view.frame.width*3, y: 0, width: self.view.frame.width, height: self.view.frame.height-20)
-        ImageView5.frame = CGRect(x: self.view.frame.width*4, y: 0, width: self.view.frame.width, height: self.view.frame.height-20)
-        ImageView6.frame = CGRect(x: self.view.frame.width*5, y: 0, width: self.view.frame.width, height: self.view.frame.height-20)
         startButton.frame = CGRectMake(self.view.frame.width*(62.5/12), self.view.frame.height*(90/100), self.view.frame.width*(3/5), self.view.frame.height*(1/12))
-        
-        ImageView1.image = tutorialImage1
-        ImageView2.image = tutorialImage2
-        ImageView3.image = tutorialImage3
-        ImageView4.image = tutorialImage4
-        
-        ImageView5.image = tutorialImage5
-        ImageView6.image = tutorialImage6
         
         startButton.setTitle("Let's Start!", forState: .Normal)
         startButton.backgroundColor = UIColor.redColor()
@@ -56,12 +34,21 @@ class TutorialViewController: UIViewController {
         scrollPage.backgroundColor = UIColor.blackColor()
         self.view.addSubview(scrollPage)
         
-        scrollPage.addSubview(ImageView1)
-        scrollPage.addSubview(ImageView2)
-        scrollPage.addSubview(ImageView3)
-        scrollPage.addSubview(ImageView4)
-        scrollPage.addSubview(ImageView5)
-        scrollPage.addSubview(ImageView6)
+        for var i = 0; i < pageSize; i = i+1 {
+            let img: UIImage = UIImage(named:tImageArray[i])!
+            imgView = UIImageView(image: img)
+            imgView.frame = CGRectMake(self.view.frame.width*CGFloat(i), 0, self.view.frame.width, self.view.frame.height)
+            scrollPage.addSubview(imgView)
+        }
+        
+        //UIPageControllの作成
+        pageControl = UIPageControl(frame: CGRectMake(0, self.view.frame.maxY - 50, self.view.frame.width, 50))
+        pageControl.backgroundColor = UIColor.grayColor()
+        pageControl.numberOfPages = pageSize
+        pageControl.currentPage = 0
+        pageControl.userInteractionEnabled = false
+        self.view.addSubview(pageControl)
+        
         scrollPage.addSubview(startButton)
         
         scrollPage.pagingEnabled = true
@@ -73,6 +60,16 @@ class TutorialViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    func scrollViewDidScroll(scrollview: UIScrollView) {
+        print("test")
+            // スクロール数が1ページ分になったら時.
+            if fmod(scrollPage.contentOffset.x, scrollPage.frame.maxX) == 0 {
+            // ページの場所を切り替える.
+            pageControl.currentPage = Int(scrollPage.contentOffset.x / scrollPage.frame.maxX)
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

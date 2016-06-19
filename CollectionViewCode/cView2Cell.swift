@@ -20,7 +20,7 @@ class cView2Cell: UICollectionViewCell {
         super.init(frame: frame)
         dateLabel2 = UILabel()
         dateLabel2.frame = CGRectMake(12, 12, self.frame.width*(1/3), self.frame.height*(1/4))
-        dateLabel2.textColor = UIColor.whiteColor()
+        dateLabel2.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
         dateLabel2.font = UIFont.systemFontOfSize(self.frame.height*(1/4))
         
         shadow = UIImageView()

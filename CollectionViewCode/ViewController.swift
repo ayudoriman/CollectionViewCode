@@ -31,15 +31,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var colorArray = [  UIColor.grayColor(),
                         UIColor(red:88/255, green: 163/255, blue: 1, alpha: 1.0),
                         UIColor(red: 1, green: 88/255, blue: 131/255, alpha:1.0),
-                        UIColor.redColor(),]
+                        UIColor.redColor(),
+                        UIColor.yellowColor(),
+                        UIColor.greenColor(),
+                        UIColor(red: 1, green: 161/255, blue: 26/255, alpha:1.0)]
     
-    var backArray = [  UIColor(red:255/255, green: 48/255, blue: 92/255, alpha: 0.6),
-                        UIColor(red:70/255, green: 114/255, blue: 255/255, alpha: 0.6),
-                        UIColor(red:36/255, green: 255/255, blue: 31/255, alpha:0.6),
-                        UIColor(red:255/255, green: 255/255, blue: 51/255, alpha: 0.6),
-                        UIColor(red:255/255, green: 153/255, blue: 51/255, alpha: 0.6),
-                        UIColor(red:199/255, green: 73/255, blue: 251/255, alpha: 0.6),
-                        UIColor(red:0/255, green: 255/255, blue: 255/255, alpha: 0.6)]
+    var backArray = [  UIColor(red:255/255, green: 48/255, blue: 92/255, alpha: 0.4),
+                        UIColor(red:70/255, green: 114/255, blue: 255/255, alpha: 0.4),
+                        UIColor(red:36/255, green: 255/255, blue: 31/255, alpha:0.4),
+                        UIColor(red:255/255, green: 255/255, blue: 51/255, alpha: 0.4),
+                        UIColor(red:255/255, green: 153/255, blue: 51/255, alpha: 0.4),
+                        UIColor(red:199/255, green: 73/255, blue: 251/255, alpha: 0.4),
+                        UIColor(red:0/255, green: 255/255, blue: 255/255, alpha: 0.4)]
     var backnumber = [0,1,2,3,4,5]
                     // gray/sad/happy/upset/
 
@@ -167,7 +170,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             userdefaults.setObject(true, forKey: "tutorial")
              performSegueWithIdentifier("toTurorialSegue", sender: self)
         }else{
-            userdefaults.setObject(true, forKey: "tutorial")
+           userdefaults.setObject(nil, forKey: "tutorial")
         }
     }
 
@@ -203,10 +206,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             if dic == nil{
                 let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
-                cell.dateLabel1.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
+                cell.dateLabel1.textColor = UIColor.whiteColor()
             }
             cell.dateLabel1.text = dates1[indexPath.row]
             return cell
@@ -224,10 +227,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             if dic == nil{
                 let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
-                cell.dateLabel2.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
+                cell.dateLabel2.textColor = UIColor.whiteColor()
             }
             cell.dateLabel2.text = dates2[indexPath.row]
             return cell
@@ -240,10 +243,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             if dic == nil{
                 let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
-                cell.dateLabel3.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
+                cell.dateLabel3.textColor = UIColor.whiteColor()
             }
             cell.dateLabel3.text = dates3[indexPath.row]
             return cell
@@ -256,10 +259,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             if dic == nil{
                 let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
-                cell.dateLabel4.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
             }else{
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
+                cell.dateLabel4.textColor = UIColor.whiteColor()
             }
             cell.dateLabel4.text = dates4[indexPath.row]
             return cell
@@ -274,7 +277,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     return cell
                 
            }else if monthCheck == 4 || monthCheck == 6 || monthCheck == 9 || monthCheck == 11 {
-                if indexPath.row >= 1 {
+                if indexPath.row >= 2 {
                     let cell = cView5.dequeueReusableCellWithReuseIdentifier("cView5Cell", forIndexPath: indexPath) as! cView5Cell
                 
                     cell.backgroundColor = UIColor(red: 210/255, green: 210/255, blue: 210/255, alpha: 1)
@@ -289,10 +292,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     if dic == nil{
                         let random = (Int)(arc4random_uniform(7))
                         cell.backgroundColor = backArray[random]
-                        cell.dateLabel5.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
                     } else {
                         let faceColor = dic?.valueForKey("face") as! Int
                         cell.backgroundColor = colorArray[faceColor]
+                        cell.dateLabel5.textColor = UIColor.whiteColor()
                     }
                 
                     if indexPath.row < dates5.count {
@@ -302,7 +305,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
                 
             } else {
-                if indexPath.row >= 2 {
+                if indexPath.row >= 3 {
                     let cell = cView5.dequeueReusableCellWithReuseIdentifier("cView5Cell", forIndexPath: indexPath) as! cView5Cell
                     
                     cell.backgroundColor = UIColor(red: 210/255, green: 210/255, blue: 210/255, alpha: 1)
@@ -317,10 +320,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     if dic == nil{
                         let random = (Int)(arc4random_uniform(7))
                         cell.backgroundColor = backArray[random]
-                        cell.dateLabel5.textColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4)
                     }else{
                         let faceColor = dic?.valueForKey("face") as! Int
                         cell.backgroundColor = colorArray[faceColor]
+                        cell.dateLabel5.textColor = UIColor.whiteColor()
+
                     }
                     if indexPath.row < dates5.count {
                         cell.dateLabel5.text = dates5[indexPath.row]
@@ -336,9 +340,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if collectionView.tag == 1{
             date = "\(yearMonth)0\(indexPath.item+1)"
             let dic = userdefaults.objectForKey(date)
-            let comment: String? = dic?.valueForKey("comment") as? String
+            //let comment: String? = dic?.valueForKey("comment") as? String
+            let photo: NSData? = dic?.valueForKey("image") as? NSData
             
-            if comment == nil{
+            if photo == nil{
                 let alert = UIAlertController(title: "No Data", message: "思い出が見当たりません。",preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in print("NoData")}
                     )
@@ -359,9 +364,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
             
             let dic = userdefaults.objectForKey(date)
-            let comment: String? = dic?.valueForKey("comment") as? String
+            let photo: NSData? = dic?.valueForKey("image") as? NSData
             
-            if comment == nil{
+            if photo == nil{
                 let alert = UIAlertController(title: "No Data", message: "思い出が見当たりません。",preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in print("NoData")}
                     )
@@ -375,10 +380,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if collectionView.tag == 3{
             date = "\(yearMonth)\(indexPath.item+15)"
             let dic = userdefaults.objectForKey(date)
-            let comment: String? = dic?.valueForKey("comment") as? String
-                            print(dic)
+            let photo: NSData? = dic?.valueForKey("image") as? NSData
             
-            if comment == nil{
+            if photo == nil{
                 let alert = UIAlertController(title: "No Data", message: "思い出が見当たりません。",preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in print("NoData")}
                     )
@@ -392,9 +396,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if collectionView.tag == 4{
             date = "\(yearMonth)\(indexPath.item+22)"
             let dic = userdefaults.objectForKey(date)
-            let comment: String? = dic?.valueForKey("comment") as? String
+            let photo: NSData? = dic?.valueForKey("image") as? NSData
             
-            if comment == nil{
+            if photo == nil{
                 let alert = UIAlertController(title: "No Data", message: "思い出が見当たりません。",preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in print("NoData")}
                     )
@@ -408,9 +412,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if collectionView.tag == 5{
             date = "\(yearMonth)\(indexPath.item+29)"
             let dic = userdefaults.objectForKey(date)
-            let comment: String? = dic?.valueForKey("comment") as? String
+            let photo: NSData? = dic?.valueForKey("image") as? NSData
             
-            if comment == nil{
+            if photo == nil{
                 let alert = UIAlertController(title: "No Data", message: "思い出が見当たりません。",preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in print("NoData")}
                     )

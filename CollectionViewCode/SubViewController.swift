@@ -21,15 +21,19 @@ class SubViewController: UIViewController {
     var peopleLabel: UILabel!
     var commentLabel: UILabel!
     
+    var imageView: UIImageView!
     var commentBg: UIImageView!
     var locationIcon: UIImageView!
     var faceIcon: UIImageView!
     
-    var faceName = ["BasicFace.png","SadFace.png","HappyFace.png","UpsetFace.png"]
+    var faceName = ["BasicFace.png","SadFace.png","HappyFace.png","UpsetFace.png","BoringFace.png","ConfusingFace.png","WonderFace.png"]
     var colorArray = [  UIColor.grayColor(),
                         UIColor(red:88/255, green: 163/255, blue: 1, alpha: 0.98),
                         UIColor(red: 1, green: 88/255, blue: 131/255, alpha:0.98),
-                        UIColor.redColor(),]
+                        UIColor.redColor(),
+                        UIColor.yellowColor(),
+                        UIColor.greenColor(),
+                        UIColor(red: 1, green: 161/255, blue: 26/255, alpha:1.0)]
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     let commentUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -42,6 +46,7 @@ class SubViewController: UIViewController {
         let comment: String! = dic.valueForKey("comment") as! String
         let place: String! = dic.valueForKey("place") as! String
         let face: Int! = dic.valueForKey("face") as! Int
+        let imageData: NSData! = dic.valueForKey("image") as! NSData
         
         //半透明の背景 上層
         bgViewU = UIView()
@@ -50,6 +55,15 @@ class SubViewController: UIViewController {
         bgViewU.backgroundColor = colorArray[face]
         bgViewU.layer.cornerRadius = 10
         view.addSubview(bgViewU)
+        
+        //写真表示
+        let image = UIImage(data: imageData!)
+        imageView = UIImageView()
+        imageView.frame.size = CGSize(width: self.view.frame.width*(8/9), height: self.view.frame.height*(3/8))
+        imageView.center = CGPoint(x: self.view.center.x, y: self.view.frame.height*(3/8))
+        imageView.image = image!
+        view.addSubview(imageView)
+        
         
         //場所ラベル
         placeLabel = UILabel()
@@ -99,6 +113,7 @@ class SubViewController: UIViewController {
         
         commentLabel.text = comment
         placeLabel.text = place
+        print("hoge")
         faceIcon.image = UIImage(named: faceName[face])
         // Do any additional setup after loading the view.
     }
