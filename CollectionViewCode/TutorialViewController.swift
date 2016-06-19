@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
     var scrollPage: UIScrollView!
     var pageControl: UIPageControl!
@@ -22,9 +22,10 @@ class TutorialViewController: UIViewController {
         
         let tImageArray:[String] = ["Tutorial2.png","Tutorial3.png","Tutorial4.png","Tutorial5.png","Tutorial6.png","Tutorial7.png"]
 
-        startButton.frame = CGRectMake(self.view.frame.width*(62.5/12), self.view.frame.height*(90/100), self.view.frame.width*(3/5), self.view.frame.height*(1/12))
+        startButton.frame = CGRectMake(self.view.frame.width*(5.1), self.view.frame.height*(8/100), self.view.frame.width*(4/5), self.view.frame.height*(1/9))
         
         startButton.setTitle("Let's Start!", forState: .Normal)
+        startButton.titleLabel?.font = UIFont.boldSystemFontOfSize(40)
         startButton.backgroundColor = UIColor.redColor()
         startButton.addTarget(self, action: "start", forControlEvents: .TouchUpInside)
         
@@ -41,6 +42,16 @@ class TutorialViewController: UIViewController {
             scrollPage.addSubview(imgView)
         }
         
+        scrollPage.addSubview(startButton)
+        
+        scrollPage.pagingEnabled = true
+        
+        scrollPage.delegate = self
+        scrollPage.directionalLockEnabled = true
+        scrollPage.showsVerticalScrollIndicator = false
+        scrollPage.bounces = false
+        scrollPage.alwaysBounceVertical = false
+        
         //UIPageControllの作成
         pageControl = UIPageControl(frame: CGRectMake(0, self.view.frame.maxY - 50, self.view.frame.width, 50))
         pageControl.backgroundColor = UIColor.grayColor()
@@ -49,19 +60,10 @@ class TutorialViewController: UIViewController {
         pageControl.userInteractionEnabled = false
         self.view.addSubview(pageControl)
         
-        scrollPage.addSubview(startButton)
-        
-        scrollPage.pagingEnabled = true
-        scrollPage.directionalLockEnabled = true
-        scrollPage.showsVerticalScrollIndicator = false
-        scrollPage.bounces = false
-        scrollPage.alwaysBounceVertical = false
-        
-        
         // Do any additional setup after loading the view.
     }
     
-    func scrollViewDidScroll(scrollview: UIScrollView) {
+    func scrollViewDidEndDecelerating(scrollview: UIScrollView) {
         print("test")
             // スクロール数が1ページ分になったら時.
             if fmod(scrollPage.contentOffset.x, scrollPage.frame.maxX) == 0 {
