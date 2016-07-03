@@ -30,7 +30,7 @@ class cView1Cell: UICollectionViewCell {
         
         shadow = UIImageView()
         shadow.frame = CGRectMake(0, 0, self.frame.width, self.frame.height)
-        shadow.image = UIImage(named: "shadow_square.png")
+        //shadow.image = UIImage(named: "shadow_square.png")
         
         self.addSubview(shadow)
         self.addSubview(dateLabel1)

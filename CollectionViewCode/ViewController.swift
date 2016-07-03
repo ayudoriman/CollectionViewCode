@@ -210,6 +210,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
                 cell.dateLabel1.textColor = UIColor.whiteColor()
+                cell.shadow.image = UIImage(named: "shadow_square.png")
             }
             cell.dateLabel1.text = dates1[indexPath.row]
             return cell
@@ -231,6 +232,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
                 cell.dateLabel2.textColor = UIColor.whiteColor()
+                cell.shadow.image = UIImage(named: "shadow_square.png")
             }
             cell.dateLabel2.text = dates2[indexPath.row]
             return cell
@@ -247,22 +249,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
                 cell.dateLabel3.textColor = UIColor.whiteColor()
+                cell.shadow.image = UIImage(named: "shadow_square.png")
             }
             cell.dateLabel3.text = dates3[indexPath.row]
             return cell
             
         }else if collectionView.tag == 4{
             let cell = cView4.dequeueReusableCellWithReuseIdentifier("cView4Cell", forIndexPath: indexPath) as! cView4Cell
-            date = "\(yearMonth)0\(indexPath.item+1)"
+            date = "\(yearMonth)\(indexPath.item+22)"
             let dic = userdefaults.objectForKey(date)
             
             if dic == nil{
                 let random = (Int)(arc4random_uniform(7))
                 cell.backgroundColor = backArray[random]
             }else{
+                print("exist")
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
                 cell.dateLabel4.textColor = UIColor.whiteColor()
+                cell.shadow.image = UIImage(named: "shadow_square.png")
             }
             cell.dateLabel4.text = dates4[indexPath.row]
             return cell
@@ -296,6 +301,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         let faceColor = dic?.valueForKey("face") as! Int
                         cell.backgroundColor = colorArray[faceColor]
                         cell.dateLabel5.textColor = UIColor.whiteColor()
+                        cell.shadow.image = UIImage(named: "shadow_square.png")
                     }
                 
                     if indexPath.row < dates5.count {
@@ -324,6 +330,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         let faceColor = dic?.valueForKey("face") as! Int
                         cell.backgroundColor = colorArray[faceColor]
                         cell.dateLabel5.textColor = UIColor.whiteColor()
+                        cell.shadow.image = UIImage(named: "shadow_square.png")
 
                     }
                     if indexPath.row < dates5.count {
@@ -395,6 +402,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         if collectionView.tag == 4{
             date = "\(yearMonth)\(indexPath.item+22)"
+            print(date)
             let dic = userdefaults.objectForKey(date)
             let photo: NSData? = dic?.valueForKey("image") as? NSData
             

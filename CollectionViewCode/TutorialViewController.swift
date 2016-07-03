@@ -10,6 +10,7 @@ import UIKit
 
 class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
+    var bgViewU: UIView!
     var scrollPage: UIScrollView!
     var pageControl: UIPageControl!
     var startButton = UIButton()
@@ -21,7 +22,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         let pageSize = 6
         
         let tImageArray:[String] = ["Tutorial2.png","Tutorial3.png","Tutorial4.png","Tutorial5.png","Tutorial6.png","Tutorial7.png"]
-
+        
+        
         startButton.frame = CGRectMake(self.view.frame.width*(5.1), self.view.frame.height*(8/100), self.view.frame.width*(4/5), self.view.frame.height*(1/9))
         
         startButton.setTitle("Let's Start!", forState: .Normal)
@@ -31,7 +33,9 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         scrollPage = UIScrollView()
         scrollPage.contentSize = CGSizeMake(self.view.frame.width*6, self.view.frame.height)
-        scrollPage.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height-20)
+        scrollPage.frame.size = CGSize(width: self.view.frame.width*(8/9), height: self.view.frame.height*(3/4))
+        scrollPage.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
+        scrollPage.layer.cornerRadius = 10
         scrollPage.backgroundColor = UIColor.blackColor()
         self.view.addSubview(scrollPage)
         
@@ -59,6 +63,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = 0
         pageControl.userInteractionEnabled = false
         self.view.addSubview(pageControl)
+        
         
         // Do any additional setup after loading the view.
     }
