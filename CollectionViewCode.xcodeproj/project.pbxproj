@@ -32,18 +32,6 @@
 		D36A9C0D1C54B6F5005B3AFD /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF01C54B6F5005B3AFD /* location.png */; };
 		D36A9C0E1C54B6F5005B3AFD /* OriginPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF11C54B6F5005B3AFD /* OriginPhoto.png */; };
 		D36A9C0F1C54B6F5005B3AFD /* PhotoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF21C54B6F5005B3AFD /* PhotoLogo.png */; };
-		D36A9C101C54B6F5005B3AFD /* Background.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF41C54B6F5005B3AFD /* Background.psd */; };
-		D36A9C111C54B6F5005B3AFD /* BasicFace.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF51C54B6F5005B3AFD /* BasicFace.psd */; };
-		D36A9C121C54B6F5005B3AFD /* Cancel.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF61C54B6F5005B3AFD /* Cancel.psd */; };
-		D36A9C131C54B6F5005B3AFD /* comment.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF71C54B6F5005B3AFD /* comment.psd */; };
-		D36A9C141C54B6F5005B3AFD /* design.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF81C54B6F5005B3AFD /* design.psd */; };
-		D36A9C151C54B6F5005B3AFD /* eNIKKI.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BF91C54B6F5005B3AFD /* eNIKKI.psd */; };
-		D36A9C161C54B6F5005B3AFD /* iphone_flame.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BFA1C54B6F5005B3AFD /* iphone_flame.psd */; };
-		D36A9C171C54B6F5005B3AFD /* location.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BFB1C54B6F5005B3AFD /* location.psd */; };
-		D36A9C181C54B6F5005B3AFD /* OriginPhoto.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BFC1C54B6F5005B3AFD /* OriginPhoto.psd */; };
-		D36A9C191C54B6F5005B3AFD /* PhotoLogo.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BFD1C54B6F5005B3AFD /* PhotoLogo.psd */; };
-		D36A9C1A1C54B6F5005B3AFD /* plate.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BFE1C54B6F5005B3AFD /* plate.psd */; };
-		D36A9C1B1C54B6F5005B3AFD /* screw.psd in Resources */ = {isa = PBXBuildFile; fileRef = D36A9BFF1C54B6F5005B3AFD /* screw.psd */; };
 		D36A9C1C1C54B6F5005B3AFD /* plate.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9C001C54B6F5005B3AFD /* plate.png */; };
 		D36A9C1D1C54B6F5005B3AFD /* SadFace.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9C011C54B6F5005B3AFD /* SadFace.png */; };
 		D36A9C1E1C54B6F5005B3AFD /* screw.png in Resources */ = {isa = PBXBuildFile; fileRef = D36A9C021C54B6F5005B3AFD /* screw.png */; };
@@ -62,7 +50,7 @@
 		D3A125BA1C67CA67002C9B55 /* cView3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A125B91C67CA67002C9B55 /* cView3Cell.swift */; };
 		D3A143801CDF1CD000F15E36 /* BoringFace.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A1437E1CDF1CD000F15E36 /* BoringFace.png */; };
 		D3A143811CDF1CD000F15E36 /* ConfusingFace.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A1437F1CDF1CD000F15E36 /* ConfusingFace.png */; };
-		D3E1A1581D16382300065083 /* WonderFace.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E1A1571D16382300065083 /* WonderFace.png */; };
+		D3E5611B1D3BCD3C00606D24 /* WonderFace.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E5611A1D3BCD3C00606D24 /* WonderFace.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,18 +102,6 @@
 		D36A9BF01C54B6F5005B3AFD /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		D36A9BF11C54B6F5005B3AFD /* OriginPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OriginPhoto.png; sourceTree = "<group>"; };
 		D36A9BF21C54B6F5005B3AFD /* PhotoLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoLogo.png; sourceTree = "<group>"; };
-		D36A9BF41C54B6F5005B3AFD /* Background.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.psd; sourceTree = "<group>"; };
-		D36A9BF51C54B6F5005B3AFD /* BasicFace.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicFace.psd; sourceTree = "<group>"; };
-		D36A9BF61C54B6F5005B3AFD /* Cancel.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cancel.psd; sourceTree = "<group>"; };
-		D36A9BF71C54B6F5005B3AFD /* comment.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = comment.psd; sourceTree = "<group>"; };
-		D36A9BF81C54B6F5005B3AFD /* design.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = design.psd; sourceTree = "<group>"; };
-		D36A9BF91C54B6F5005B3AFD /* eNIKKI.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = eNIKKI.psd; sourceTree = "<group>"; };
-		D36A9BFA1C54B6F5005B3AFD /* iphone_flame.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = iphone_flame.psd; sourceTree = "<group>"; };
-		D36A9BFB1C54B6F5005B3AFD /* location.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.psd; sourceTree = "<group>"; };
-		D36A9BFC1C54B6F5005B3AFD /* OriginPhoto.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = OriginPhoto.psd; sourceTree = "<group>"; };
-		D36A9BFD1C54B6F5005B3AFD /* PhotoLogo.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = PhotoLogo.psd; sourceTree = "<group>"; };
-		D36A9BFE1C54B6F5005B3AFD /* plate.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = plate.psd; sourceTree = "<group>"; };
-		D36A9BFF1C54B6F5005B3AFD /* screw.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = screw.psd; sourceTree = "<group>"; };
 		D36A9C001C54B6F5005B3AFD /* plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plate.png; sourceTree = "<group>"; };
 		D36A9C011C54B6F5005B3AFD /* SadFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SadFace.png; sourceTree = "<group>"; };
 		D36A9C021C54B6F5005B3AFD /* screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screw.png; sourceTree = "<group>"; };
@@ -144,7 +120,7 @@
 		D3A125B91C67CA67002C9B55 /* cView3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cView3Cell.swift; sourceTree = "<group>"; };
 		D3A1437E1CDF1CD000F15E36 /* BoringFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoringFace.png; sourceTree = "<group>"; };
 		D3A1437F1CDF1CD000F15E36 /* ConfusingFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConfusingFace.png; sourceTree = "<group>"; };
-		D3E1A1571D16382300065083 /* WonderFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WonderFace.png; path = PhotoShop/WonderFace.png; sourceTree = "<group>"; };
+		D3E5611A1D3BCD3C00606D24 /* WonderFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WonderFace.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,29 +210,10 @@
 			path = CollectionViewCodeUITests;
 			sourceTree = "<group>";
 		};
-		D36A9BF31C54B6F5005B3AFD /* PhotoShop */ = {
-			isa = PBXGroup;
-			children = (
-				D36A9BF41C54B6F5005B3AFD /* Background.psd */,
-				D36A9BF51C54B6F5005B3AFD /* BasicFace.psd */,
-				D36A9BF61C54B6F5005B3AFD /* Cancel.psd */,
-				D36A9BF71C54B6F5005B3AFD /* comment.psd */,
-				D36A9BF81C54B6F5005B3AFD /* design.psd */,
-				D36A9BF91C54B6F5005B3AFD /* eNIKKI.psd */,
-				D36A9BFA1C54B6F5005B3AFD /* iphone_flame.psd */,
-				D36A9BFB1C54B6F5005B3AFD /* location.psd */,
-				D36A9BFC1C54B6F5005B3AFD /* OriginPhoto.psd */,
-				D36A9BFD1C54B6F5005B3AFD /* PhotoLogo.psd */,
-				D36A9BFE1C54B6F5005B3AFD /* plate.psd */,
-				D36A9BFF1C54B6F5005B3AFD /* screw.psd */,
-			);
-			path = PhotoShop;
-			sourceTree = "<group>";
-		};
 		D36A9C221C54B713005B3AFD /* material */ = {
 			isa = PBXGroup;
 			children = (
-				D3E1A1571D16382300065083 /* WonderFace.png */,
+				D3E5611A1D3BCD3C00606D24 /* WonderFace.png */,
 				D3A1437E1CDF1CD000F15E36 /* BoringFace.png */,
 				D3A1437F1CDF1CD000F15E36 /* ConfusingFace.png */,
 				D36A9C231C54BB2A005B3AFD /* film.png */,
@@ -278,7 +235,6 @@
 				D36A9BF01C54B6F5005B3AFD /* location.png */,
 				D36A9BF11C54B6F5005B3AFD /* OriginPhoto.png */,
 				D36A9BF21C54B6F5005B3AFD /* PhotoLogo.png */,
-				D36A9BF31C54B6F5005B3AFD /* PhotoShop */,
 				D36A9C001C54B6F5005B3AFD /* plate.png */,
 				D36A9C011C54B6F5005B3AFD /* SadFace.png */,
 				D36A9C021C54B6F5005B3AFD /* screw.png */,
@@ -393,7 +349,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36A9C161C54B6F5005B3AFD /* iphone_flame.psd in Resources */,
 				D3A125B61C672A33002C9B55 /* Tutorial5.png in Resources */,
 				D36A9C211C54B6F5005B3AFD /* UpsetFace.png in Resources */,
 				D36A9C0E1C54B6F5005B3AFD /* OriginPhoto.png in Resources */,
@@ -402,8 +357,6 @@
 				D3A125B21C672A33002C9B55 /* Tutorial1.png in Resources */,
 				D36A9C1D1C54B6F5005B3AFD /* SadFace.png in Resources */,
 				D36A9C1F1C54B6F5005B3AFD /* shadow_square.png in Resources */,
-				D36A9C181C54B6F5005B3AFD /* OriginPhoto.psd in Resources */,
-				D36A9C101C54B6F5005B3AFD /* Background.psd in Resources */,
 				D3A125B51C672A33002C9B55 /* Tutorial4.png in Resources */,
 				D36A9C1C1C54B6F5005B3AFD /* plate.png in Resources */,
 				D3A125B31C672A33002C9B55 /* Tutorial2.png in Resources */,
@@ -411,31 +364,22 @@
 				D36A9C0F1C54B6F5005B3AFD /* PhotoLogo.png in Resources */,
 				D36A9C1E1C54B6F5005B3AFD /* screw.png in Resources */,
 				D36A9C0A1C54B6F5005B3AFD /* comment.png in Resources */,
-				D36A9C171C54B6F5005B3AFD /* location.psd in Resources */,
-				D36A9C121C54B6F5005B3AFD /* Cancel.psd in Resources */,
 				A3096F661BD38141002AFDF8 /* Assets.xcassets in Resources */,
 				D36A9C0B1C54B6F5005B3AFD /* eNIKKI.png in Resources */,
 				D36A9C071C54B6F5005B3AFD /* Background.png in Resources */,
-				D36A9C1B1C54B6F5005B3AFD /* screw.psd in Resources */,
-				D36A9C141C54B6F5005B3AFD /* design.psd in Resources */,
-				D36A9C151C54B6F5005B3AFD /* eNIKKI.psd in Resources */,
 				D3A125B81C672A33002C9B55 /* Tutorial7.png in Resources */,
 				D36A9C081C54B6F5005B3AFD /* BasicFace.png in Resources */,
 				A3096F641BD38141002AFDF8 /* Main.storyboard in Resources */,
 				D36A9C061C54B6F5005B3AFD /* addImage.png in Resources */,
 				D36A9C0D1C54B6F5005B3AFD /* location.png in Resources */,
-				D36A9C111C54B6F5005B3AFD /* BasicFace.psd in Resources */,
 				D36A9C091C54B6F5005B3AFD /* Cancel.png in Resources */,
 				D36A9C201C54B6F5005B3AFD /* textfield.png in Resources */,
 				D3A125B71C672A33002C9B55 /* Tutorial6.png in Resources */,
 				D3A143811CDF1CD000F15E36 /* ConfusingFace.png in Resources */,
-				D36A9C1A1C54B6F5005B3AFD /* plate.psd in Resources */,
-				D36A9C191C54B6F5005B3AFD /* PhotoLogo.psd in Resources */,
 				D36A9C0C1C54B6F5005B3AFD /* HappyFace.png in Resources */,
-				D3E1A1581D16382300065083 /* WonderFace.png in Resources */,
 				D3A125A81C670C7E002C9B55 /* saveIcon.png in Resources */,
-				D36A9C131C54B6F5005B3AFD /* comment.psd in Resources */,
 				D3A143801CDF1CD000F15E36 /* BoringFace.png in Resources */,
+				D3E5611B1D3BCD3C00606D24 /* WonderFace.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

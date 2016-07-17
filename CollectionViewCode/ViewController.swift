@@ -242,15 +242,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             date = "\(yearMonth)\(indexPath.item+15)"
             let dic = userdefaults.objectForKey(date)
             
-            if dic == nil{
-                let random = (Int)(arc4random_uniform(7))
-                cell.backgroundColor = backArray[random]
-            }else{
+            if dic !== nil{
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
                 cell.dateLabel3.textColor = UIColor.whiteColor()
                 cell.shadow.image = UIImage(named: "shadow_square.png")
+            }else{
+                let random = (Int)(arc4random_uniform(7))
+                cell.backgroundColor = backArray[random]
+
             }
+//            if dic == nil{
+//                let random = (Int)(arc4random_uniform(7))
+//                cell.backgroundColor = backArray[random]
+//            }else{
+//                let faceColor = dic?.valueForKey("face") as! Int
+//                cell.backgroundColor = colorArray[faceColor]
+//                cell.dateLabel3.textColor = UIColor.whiteColor()
+//                cell.shadow.image = UIImage(named: "shadow_square.png")
+//            }
             cell.dateLabel3.text = dates3[indexPath.row]
             return cell
             
@@ -259,16 +269,27 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             date = "\(yearMonth)\(indexPath.item+22)"
             let dic = userdefaults.objectForKey(date)
             
-            if dic == nil{
-                let random = (Int)(arc4random_uniform(7))
-                cell.backgroundColor = backArray[random]
-            }else{
+            if dic !== nil{
                 print("exist")
                 let faceColor = dic?.valueForKey("face") as! Int
                 cell.backgroundColor = colorArray[faceColor]
                 cell.dateLabel4.textColor = UIColor.whiteColor()
                 cell.shadow.image = UIImage(named: "shadow_square.png")
+            }else{
+                let random = (Int)(arc4random_uniform(7))
+                cell.backgroundColor = backArray[random]
             }
+
+//            if dic == nil{
+//                let random = (Int)(arc4random_uniform(7))
+//                cell.backgroundColor = backArray[random]
+//            }else{
+//                print("exist")
+//                let faceColor = dic?.valueForKey("face") as! Int
+//                cell.backgroundColor = colorArray[faceColor]
+//                cell.dateLabel4.textColor = UIColor.whiteColor()
+//                cell.shadow.image = UIImage(named: "shadow_square.png")
+//            }
             cell.dateLabel4.text = dates4[indexPath.row]
             return cell
         
